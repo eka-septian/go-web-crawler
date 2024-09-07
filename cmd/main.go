@@ -6,11 +6,12 @@ import (
 	"strconv"
 
 	"github.com/eka-septian/go-web-crawler/internal/crawler"
+	"github.com/eka-septian/go-web-crawler/internal/report"
 )
 
 func main() {
 	if len(os.Args) != 4 {
-		fmt.Println("usage: ./crawler <URL string> <maxConcurrency int> <maxPages int>")
+		fmt.Println("usage: crawler <URL string> <maxConcurrency int> <maxPages int>")
 		os.Exit(1)
 	}
 
@@ -28,7 +29,9 @@ func main() {
 
 	c, err := crawler.New(rawBaseURL, maxConcurrent, maxPages)
 	if err != nil {
-        panic(err)
+		panic(err)
 	}
 	c.Start()
+
+    report.Print(c.Pages, c.BaseURL.String())
 }

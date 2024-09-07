@@ -150,7 +150,7 @@ func getURLsFromHTMLBody(htmlBody, rawBaseURL string) ([]string, error) {
 func getHTML(rawURL string) (string, error) {
 	resp, err := http.Get(rawURL)
 	if err != nil {
-		return "", fmt.Errorf("Couldn't make a request: %s", err)
+		return "", fmt.Errorf("Couldn't get URL: %s", err)
 	}
 	defer resp.Body.Close()
 
