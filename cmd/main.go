@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/eka-septian/go-web-crawler/internal/crawler"
-	"github.com/eka-septian/go-web-crawler/internal/report"
+	"github.com/ekastn/go-web-crawler/internal/crawler"
+	"github.com/ekastn/go-web-crawler/internal/report"
 )
 
 func main() {
@@ -33,5 +33,5 @@ func main() {
 	}
 	c.Start()
 
-    report.Print(c.Pages, c.BaseURL.String())
+	report.Print(c.Pages, c.BaseURL.String())
 }

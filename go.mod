@@ -1,4 +1,4 @@
-module github.com/eka-septian/go-web-crawler
+module github.com/ekastn/go-web-crawler
 
 go 1.22.5
 

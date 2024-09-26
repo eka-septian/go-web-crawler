@@ -7,7 +7,7 @@ To run this application, you'll need [Git](https://git-scm.com) and [Go](https:/
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/eka-septian/go-web-crawler
+$ git clone https://github.com/ekastn/go-web-crawler
 
 # Go into the repository
 $ cd go-web-crawler
